@@ -1,0 +1,6 @@
+add_subdirectory(bgfx)
+add_subdirectory(bimg)
+add_subdirectory(bx)
+add_subdirectory(enet)
+add_subdirectory(glfw)
+add_subdirectory(raylib)

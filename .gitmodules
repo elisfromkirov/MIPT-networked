@@ -1,18 +1,18 @@
-[submodule "3rdParty/bgfx"]
-	path = 3rdParty/bgfx
+[submodule "third_party/bgfx"]
+	path = third_party/bgfx
 	url = https://github.com/bkaradzic/bgfx.git
-[submodule "3rdParty/bx"]
-	path = 3rdParty/bx
+[submodule "third_party/bx"]
+	path = third_party/bx
 	url = https://github.com/bkaradzic/bx.git
-[submodule "3rdParty/bimg"]
-	path = 3rdParty/bimg
+[submodule "third_party/bimg"]
+	path = third_party/bimg
 	url = https://github.com/bkaradzic/bimg.git
-[submodule "3rdParty/glfw"]
-	path = 3rdParty/glfw
+[submodule "third_party/glfw"]
+	path = third_party/glfw
 	url = https://github.com/glfw/glfw.git
-[submodule "3rdParty/raylib"]
-	path = 3rdParty/raylib
+[submodule "third_party/raylib"]
+	path = third_party/raylib
 	url = git@github.com:raysan5/raylib.git
-[submodule "3rdParty/enet"]
-	path = 3rdParty/enet
+[submodule "third_party/enet"]
+	path = third_party/enet
 	url = git@github.com:lsalzman/enet.git
