@@ -22,6 +22,8 @@ class Packet final {
 
   explicit operator bool() const noexcept;
 
+  Packet Clone();
+
 private:
   infra::Array<std::uint8_t> payload_;
 };

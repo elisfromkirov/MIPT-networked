@@ -4,6 +4,7 @@
 
 namespace network {
 
+
 Packet::Packet() noexcept 
     : payload_{} {
 }
@@ -32,6 +33,10 @@ std::uint64_t Packet::Size() const noexcept {
 
 Packet::operator bool() const noexcept {
   return payload_.Data() != nullptr;
+}
+
+Packet Packet::Clone() {
+  return Packet{payload_.Data(), payload_.Size()};
 }
 
 }  // namespace network
