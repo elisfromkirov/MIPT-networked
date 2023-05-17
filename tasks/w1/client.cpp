@@ -1,33 +1,17 @@
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <sys/select.h>
-#include <netdb.h>
-#include <cstring>
-#include <cstdio>
+#include <network/socket.hpp>
+
 #include <iostream>
-#include "socket_tools.h"
 
-int main(int argc, const char **argv)
-{
-  const char *port = "2022";
+int main() {
+  auto socket = network::Socket::Connect(network::Endpoint{"127.0.0.1", 2022});
 
-  addrinfo resAddrInfo;
-  int sfd = create_dgram_socket("localhost", port, &resAddrInfo);
-
-  if (sfd == -1)
-  {
-    printf("Cannot create a socket\n");
-    return 1;
-  }
-
-  while (true)
-  {
-    std::string input;
-    printf(">");
+  while (true) {
+    std::cout << "> ";
+    std::string input{};
     std::getline(std::cin, input);
-    ssize_t res = sendto(sfd, input.c_str(), input.size(), 0, resAddrInfo.ai_addr, resAddrInfo.ai_addrlen);
-    if (res == -1)
-      std::cout << strerror(errno) << std::endl;
+
+    socket.Send(network::Packet{input.data(), input.size()});
   }
+
   return 0;
 }
