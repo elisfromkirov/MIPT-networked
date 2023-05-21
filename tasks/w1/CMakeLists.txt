@@ -3,7 +3,6 @@
 file(GLOB_RECURSE INFRA_INCLUDE infra/*.hpp)
 file(GLOB_RECURSE INFRA_SOURCE infra/*.cpp)
 
-
 file(GLOB_RECURSE NETWORK_INCLUDE network/*.hpp)
 file(GLOB_RECURSE NETWORK_SOURCE network/*.cpp)
 
