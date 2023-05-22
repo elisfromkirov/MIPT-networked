@@ -1,4 +1,10 @@
-# vs code cache
+# clion settings cache directory
+.idea
+
+# clion cmake build directory
+cmake-build-debug
+
+# vs code cache directory
 .vscode
 
 # vs code cmake build directory
