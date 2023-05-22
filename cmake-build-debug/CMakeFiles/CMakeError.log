@@ -1,0 +1,54 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Determining if the function gethostbyname_r exists failed with the following output:
+Change Dir: /Users/nikitamoskalev/mipt/multiplayer/MIPT-networked/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_43ad1 && [1/2] Building C object CMakeFiles/cmTC_43ad1.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_43ad1
+FAILED: cmTC_43ad1 
+: && /Library/Developer/CommandLineTools/usr/bin/cc -DCHECK_FUNCTION_EXISTS=gethostbyname_r -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.4 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_43ad1.dir/CheckFunctionExists.c.o -o cmTC_43ad1   && :
+Undefined symbols for architecture x86_64:
+  "_gethostbyname_r", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function gethostbyaddr_r exists failed with the following output:
+Change Dir: /Users/nikitamoskalev/mipt/multiplayer/MIPT-networked/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/CLion.app/Contents/bin/ninja/mac/ninja cmTC_5703b && [1/2] Building C object CMakeFiles/cmTC_5703b.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_5703b
+FAILED: cmTC_5703b 
+: && /Library/Developer/CommandLineTools/usr/bin/cc -DCHECK_FUNCTION_EXISTS=gethostbyaddr_r -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.4 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/cmTC_5703b.dir/CheckFunctionExists.c.o -o cmTC_5703b   && :
+Undefined symbols for architecture x86_64:
+  "_gethostbyaddr_r", referenced from:
+      _main in CheckFunctionExists.c.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+
+
