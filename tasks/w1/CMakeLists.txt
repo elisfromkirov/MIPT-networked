@@ -1,7 +1,10 @@
-# -------------------- common --------------------
+############################# common #############################
 
 file(GLOB_RECURSE INFRA_INCLUDE infra/*.hpp)
 file(GLOB_RECURSE INFRA_SOURCE infra/*.cpp)
+
+file(GLOB_RECURSE INPUT_INCLUDE input/*.hpp)
+file(GLOB_RECURSE INPUT_SOURCE input/*.cpp)
 
 file(GLOB_RECURSE NETWORK_INCLUDE network/*.hpp)
 file(GLOB_RECURSE NETWORK_SOURCE network/*.cpp)
@@ -9,7 +12,7 @@ file(GLOB_RECURSE NETWORK_SOURCE network/*.cpp)
 file(GLOB_RECURSE PROTOCOL_INCLUDE protocol/*.hpp)
 file(GLOB_RECURSE PROTOCOL_SOURCE protocol/*.cpp)
 
-# -------------------- client --------------------
+############################# client #############################
 
 file(GLOB_RECURSE CLIENT_INCLUDE client/*.hpp)
 file(GLOB_RECURSE CLIENT_SOURCE client/*.cpp)
@@ -27,14 +30,16 @@ target_sources(w1-client
     ${INFRA_INCLUDE}
     ${NETWORK_INCLUDE}
     ${PROTOCOL_INCLUDE}
+    ${INPUT_INCLUDE}
   PRIVATE
     ${CLIENT_SOURCE}
     ${INFRA_SOURCE}
     ${NETWORK_SOURCE}
     ${PROTOCOL_SOURCE}
+    ${INPUT_SOURCE}
   )
 
-# -------------------- server --------------------
+############################# server #############################
 
 file(GLOB_RECURSE SERVER_INCLUDE server/*.hpp)
 file(GLOB_RECURSE SERVER_SOURCE server/*.cpp)
