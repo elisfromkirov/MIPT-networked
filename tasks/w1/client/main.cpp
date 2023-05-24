@@ -2,6 +2,8 @@
 
 #include <input/input.hpp>
 
+#include <string>
+
 int main() {
   Client client{network::Endpoint{"127.0.0.2", 2023}, network::Endpoint{"127.0.0.1", 2022}};
 

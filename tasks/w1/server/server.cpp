@@ -1,7 +1,6 @@
 #include <server/server.hpp>
 
 #include <iostream>
-#include <string_view>
 
 Server::Server(network::Endpoint endpoint)
     : host_{network::Host::Bind(endpoint)},

@@ -7,9 +7,14 @@ class Client {
  public:
   Client(network::Endpoint client_endpoint, network::Endpoint server_endpoint);
 
+  void Poll();
+
   void Send(const std::string& string);
 
   void SendKeepAlive();
+
+ private:
+  void OnDatagram(network::Packet packet);
 
  private:
   network::Host host_;
